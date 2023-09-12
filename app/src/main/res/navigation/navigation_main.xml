@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/startFragment">
+
+    <!-- StartFragment -->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.uppgift3.StartFragment"
+        android:label="Start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_quoteFragment"
+            app:destination="@id/quoteFragment" />
+    </fragment>
+
+    <!-- WeatherFragment -->
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.uppgift3.WeatherFragment"
+        android:label="Väder"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/action_weatherFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_weatherFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+
+    <!-- QuoteFragment -->
+    <fragment
+        android:id="@+id/quoteFragment"
+        android:name="com.example.uppgift3.QuoteFragment"
+        android:label="Dagens citat"
+        tools:layout="@layout/fragment_quote">
+        <action
+            android:id="@+id/action_quoteFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_quoteFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+
+    <!-- DetailsFragment -->
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.uppgift3.DetailsFragment"
+        android:label="Detaljer"
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_detailsFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_quoteFragment"
+            app:destination="@id/quoteFragment" />
+    </fragment>
+</navigation>
