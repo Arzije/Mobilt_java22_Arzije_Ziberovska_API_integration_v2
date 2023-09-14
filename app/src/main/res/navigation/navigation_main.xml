@@ -5,7 +5,6 @@
     android:id="@+id/navigation_main"
     app:startDestination="@id/startFragment">
 
-    <!-- StartFragment -->
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.uppgift3.StartFragment"
@@ -19,7 +18,6 @@
             app:destination="@id/quoteFragment" />
     </fragment>
 
-    <!-- WeatherFragment -->
     <fragment
         android:id="@+id/weatherFragment"
         android:name="com.example.uppgift3.WeatherFragment"
@@ -33,7 +31,6 @@
             app:destination="@id/startFragment" />
     </fragment>
 
-    <!-- QuoteFragment -->
     <fragment
         android:id="@+id/quoteFragment"
         android:name="com.example.uppgift3.QuoteFragment"
@@ -47,7 +44,6 @@
             app:destination="@id/startFragment" />
     </fragment>
 
-    <!-- DetailsFragment -->
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.uppgift3.DetailsFragment"
